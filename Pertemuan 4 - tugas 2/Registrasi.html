@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Registrasi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            background-color: #ffffff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 1.5rem;
+        }
+
+        .input-group {
+            margin-bottom: 1rem;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #555;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 0.75rem;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Buat Akun</h2>
+        <div class="input-group">
+            <label for="namalengkap">Nama Lengkap</label>
+            <input type="text" id="namalengkap" required>
+        </div>
+        <div class="input-group">
+            <label for="nilaiangka">Nilai Angka</label>
+            <input type="number" id="nilaiangka" required>
+        </div>
+        <div class="input-group">
+            <label for="nilaihuruf">Nilai Huruf</label>
+            <input type="text" id="nikaihuruf" required>
+        </div>
+        <button type="button" onclick="TampilkanData()">Submit</button>
+    </div>
+
+    <script>
+        function TampilkanData() {
+            const namaLengkap = document.getElementById('namalengkap').value.trim();
+            const nilaiAngka = document.getElementById('nilaiangka').value.trim();
+            const nikaiHuruf = document.getElementById('nikaihuruf').value.trim();
+
+            if (namaLengkap === '' || nilaiAngka === '' || nikaiHuruf === '') {
+                alert('Harap isi data dengan lengkap.');
+                return;
+            }
+
+            console.log('Data Input : ' + namaLengkap + ' ' + nilaiAngka + ' ' + nikaiHuruf);
+        }
+    </script>
+
+</body>
+</html>
